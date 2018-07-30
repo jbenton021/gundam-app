@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  suit_a1: MyString
+  suit_a2: MyString
+  player_a1: MyString
+  player_a2: MyString
+  suit_b1: MyString
+  suit_b2: MyString
+  player_b1: MyString
+  player_b2: MyString
+  link: MyString
+
+two:
+  suit_a1: MyString
+  suit_a2: MyString
+  player_a1: MyString
+  player_a2: MyString
+  suit_b1: MyString
+  suit_b2: MyString
+  player_b1: MyString
+  player_b2: MyString
+  link: MyString

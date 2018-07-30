@@ -1,0 +1,62 @@
+<%= form_with(model: video, local: true) do |form| %>
+  <% if video.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(video.errors.count, "error") %> prohibited this video from being saved:</h2>
+
+      <ul>
+      <% video.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :suit_a1 %>
+    <%= form.text_field :suit_a1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :suit_a2 %>
+    <%= form.text_field :suit_a2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :player_a1 %>
+    <%= form.text_field :player_a1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :player_a2 %>
+    <%= form.text_field :player_a2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :suit_b1 %>
+    <%= form.text_field :suit_b1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :suit_b2 %>
+    <%= form.text_field :suit_b2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :player_b1 %>
+    <%= form.text_field :player_b1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :player_b2 %>
+    <%= form.text_field :player_b2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :link %>
+    <%= form.text_field :link %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
