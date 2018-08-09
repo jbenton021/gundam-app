@@ -11,14 +11,20 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :suit_a1 %>
-    <%= form.text_field :suit_a1 %>
+  <div class="control-group">
+    <%= form.label :suit_a1_id, class: "control-group" %>
+    <div class="controls">
+      <%= collection_select( :video, :suit_a1_id, Suit.all, :id, :name, {}, { :multiple => false } ) %>
+      <!--<%= form.text_field :suit_a1 %>-->
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :suit_a2 %>
-    <%= form.text_field :suit_a2 %>
+  <div class="control-group">
+    <%= form.label :suit_a2_id, class: "control-group" %>
+    <div class="controls">
+      <%= collection_select( :video, :suit_a2_id, Suit.all, :id, :name, {}, { :multiple => false } ) %>
+      <!--<%= form.text_field :suit_a1 %>-->
+    </div>
   </div>
 
   <div class="field">
@@ -31,14 +37,19 @@
     <%= form.text_field :player_a2 %>
   </div>
 
-  <div class="field">
-    <%= form.label :suit_b1 %>
-    <%= form.text_field :suit_b1 %>
+  <div class="control-group">
+    <%= form.label :suit_b1_id, class: "control-group" %>
+    <div class="controls">
+      <%= collection_select( :video, :suit_b1_id, Suit.all, :id, :name, {}, { :multiple => false } ) %>
+      
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :suit_b2 %>
-    <%= form.text_field :suit_b2 %>
+  <div class="control-group">
+    <%= form.label :suit_b2_id, class: "control-group" %>
+    <div class="controls">
+      <%= collection_select( :video, :suit_b2_id, Suit.all, :id, :name, {}, { :multiple => false } ) %>
+    </div>
   </div>
 
   <div class="field">

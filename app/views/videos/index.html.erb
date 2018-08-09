@@ -21,12 +21,12 @@
   <tbody>
     <% @videos.each do |video| %>
       <tr>
-        <td><%= video.suit_a1 %></td>
-        <td><%= video.suit_a2 %></td>
+        <td><%= Suit.find(video.suit_a1_id).name %></td>
+        <td><%= Suit.find(video.suit_a2_id).name %></td>
         <td><%= video.player_a1 %></td>
         <td><%= video.player_a2 %></td>
-        <td><%= video.suit_b1 %></td>
-        <td><%= video.suit_b2 %></td>
+        <td><%= Suit.find(video.suit_b1_id).name %></td>
+        <td><%= Suit.find(video.suit_b2_id).name %></td>
         <td><%= video.player_b1 %></td>
         <td><%= video.player_b2 %></td>
         <td><%= video.link %></td>

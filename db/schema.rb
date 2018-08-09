@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_26_194156) do
+ActiveRecord::Schema.define(version: 2018_07_30_021729) do
 
   create_table "suits", force: :cascade do |t|
     t.string "name"
@@ -20,17 +20,17 @@ ActiveRecord::Schema.define(version: 2018_07_26_194156) do
   end
 
   create_table "videos", force: :cascade do |t|
-    t.string "suit_a1"
-    t.string "suit_a2"
     t.string "player_a1"
     t.string "player_a2"
-    t.string "suit_b1"
-    t.string "suit_b2"
     t.string "player_b1"
     t.string "player_b2"
     t.string "link"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "suit_a1_id"
+    t.integer "suit_a2_id"
+    t.integer "suit_b1_id"
+    t.integer "suit_b2_id"
   end
 
 end

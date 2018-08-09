@@ -2,12 +2,12 @@
 
 <p>
   <strong>Suit a1:</strong>
-  <%= @video.suit_a1 %>
+  <%= Suit.find(@video.suit_a1_id).name %>
 </p>
 
 <p>
   <strong>Suit a2:</strong>
-  <%= @video.suit_a2 %>
+  <%= Suit.find(@video.suit_a2_id).name %>
 </p>
 
 <p>
@@ -22,12 +22,12 @@
 
 <p>
   <strong>Suit b1:</strong>
-  <%= @video.suit_b1 %>
+  <%= Suit.find(@video.suit_b1_id).name %>
 </p>
 
 <p>
   <strong>Suit b2:</strong>
-  <%= @video.suit_b2 %>
+  <%= Suit.find(@video.suit_b2_id).name %>
 </p>
 
 <p>
