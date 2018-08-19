@@ -1,18 +1,45 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Videos</h1>
+<!--<h1>Videos</h1>-->
 
-<table>
+<header class="navbar navbar-fixed-top navbar-inverse">
+  <div class="container">
+    <%= link_to "Gundam Versus Video DB", root_path, id: "logo" %>
+  </div>
+</header>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+  <%= form_tag videos_path, :method => 'get' do%>
+    <div class="form-group">
+      <%= label_tag "suit_cost", "Cost" %>
+      <%= select_tag 'suit_cost', '<option>200</option><option>300</option><option>400</option><option>500</option>'.html_safe, multiple: false, class: 'form-control'%>
+    </div>
+    <div class="form-group">
+      <%= label_tag "video[suit_a1_id]", "Suit" %>
+      <%= select_tag 'video[suit_a1_id]', grouped_options_for_select(Suit.for_select), class: 'form-control' %>
+    </div>
+    <div class="form-group">
+      <%= button_tag(type: 'submit', class: "btn btn-primary") do %>
+                Search
+      <% end %>
+
+    </div>
+    <% end %>
+  </div>
+</div>
+
+<table class="table table-striped">
   <thead>
     <tr>
-      <th>Suit a1</th>
-      <th>Suit a2</th>
-      <th>Player a1</th>
-      <th>Player a2</th>
-      <th>Suit b1</th>
-      <th>Suit b2</th>
-      <th>Player b1</th>
-      <th>Player b2</th>
+      <th>Suit A1</th>
+      <th>Suit A2</th>
+      <th>Player A1</th>
+      <th>Player A2</th>
+      <th>Suit B1</th>
+      <th>Suit B2</th>
+      <th>Player B1</th>
+      <th>Player B2</th>
       <th>Link</th>
       <th colspan="3"></th>
     </tr>
@@ -29,7 +56,7 @@
         <td><%= Suit.find(video.suit_b2_id).name %></td>
         <td><%= video.player_b1 %></td>
         <td><%= video.player_b2 %></td>
-        <td><%= video.link %></td>
+        <td><%= link_to "Watch", video.link %></td>
         <td><%= link_to 'Show', video %></td>
         <td><%= link_to 'Edit', edit_video_path(video) %></td>
         <td><%= link_to 'Destroy', video, method: :delete, data: { confirm: 'Are you sure?' } %></td>
